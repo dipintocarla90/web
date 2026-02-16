@@ -2,6 +2,15 @@
 <html lang="en" class="h-100">
 
 <head>
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17210514105"></script> 
+  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17210514105'); </script>
+</head>
+  
+  <head>
+    <!-- Event snippet for Vista de una página conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-17210514105/xF-NCKnE1dsaELm1zo5A', 'value': 1.0, 'currency': 'USD', 'event_callback': callback }); return false; } </script>
+  </head>
+  
+<head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17210514105"></script>
 <script>
@@ -264,7 +273,7 @@ function gtag_report_conversion(url) {
 
               <div class="email">
                  <p>
-                  <a href="mailto: dipinto.carla90@gmail.com" target="_blank">
+                  <a onclick="return gtag_report_conversion('"mailto: dipinto.carla90@gmail.com")" />
                     <i class="bi bi-envelope"></i></a> 
                     <a href="mailto:dipinto.carla90@gmail.com" target="_blank">
                      dipinto.carla90@gmail.com
@@ -315,3 +324,4 @@ function gtag_report_conversion(url) {
 </body>
 
 </html>
+
