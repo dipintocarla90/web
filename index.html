@@ -112,61 +112,128 @@
       font-family: 'Lora', serif;
     }
 
-    /* ── Responsive: sidebar header on mobile ── */
+    /* ── Responsive: replace sidebar with top navbar on mobile ── */
     @media (max-width: 991px) {
+
+      /* Hide original sidebar header, show our topbar instead */
       #header {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: auto !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 8px 16px !important;
-        z-index: 9997;
-        flex-direction: row !important;
-        align-items: center;
-        background: #040b14;
+        display: none !important;
       }
-      #header .d-flex {
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-      }
-      #header .profile {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0 !important;
-      }
-      #header .profile img {
-        width: 36px !important;
-        height: 36px !important;
-      }
-      #header .profile h1 {
-        font-size: 1rem !important;
-        margin: 0 !important;
-      }
-      #header .profile .social-links {
-        display: none;
-      }
-      #header .nav-menu {
-        display: none;
-      }
+
+      /* Remove left margin from main content */
       #main {
         margin-left: 0 !important;
-        margin-top: 56px;
       }
-      .hero-section {
-        margin-top: 0;
+
+      /* Push content below topbar */
+      body {
+        padding-top: 54px;
       }
-      .mobile-nav-toggle {
-        display: block !important;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
+
+      /* Mobile topbar */
+      #mobile-topbar {
+        display: flex !important;
       }
+
+      /* Mobile nav drawer */
+      #mobile-nav-drawer {
+        display: block;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #mobile-topbar { display: none !important; }
+      #mobile-nav-drawer { display: none !important; }
+    }
+
+    /* ── Mobile topbar styles ── */
+    #mobile-topbar {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 54px;
+      background: #040b14;
+      z-index: 9998;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+
+    #mobile-topbar .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    #mobile-topbar .topbar-brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    #mobile-topbar .topbar-brand span {
+      color: #fff;
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    #mobile-topbar .topbar-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 4px 6px;
+      line-height: 1;
+    }
+
+    /* ── Mobile nav drawer ── */
+    #mobile-nav-drawer {
+      display: none;
+      position: fixed;
+      top: 54px; left: 0; right: 0;
+      background: #040b14;
+      z-index: 9997;
+      padding: 10px 0 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      transform: translateY(-110%);
+      transition: transform 0.25s ease;
+    }
+
+    #mobile-nav-drawer.open {
+      transform: translateY(0);
+    }
+
+    #mobile-nav-drawer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #mobile-nav-drawer ul li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      color: #a8a9b4;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    #mobile-nav-drawer ul li a:hover,
+    #mobile-nav-drawer ul li a.active {
+      color: #fff;
+    }
+
+    #mobile-nav-drawer ul li a i {
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
     }
 
     /* ── Service boxes ── */
@@ -191,8 +258,29 @@
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Mobile Topbar (visible only on mobile) ======= -->
+  <div id="mobile-topbar">
+    <a href="#Home" class="topbar-brand">
+      <img src="assets/img/Foto_car.jpg" alt="Carla Di Pinto">
+      <span>Carla Di Pinto</span>
+    </a>
+    <button class="topbar-toggle" id="mobile-menu-btn" aria-label="Abrir menú">
+      <i class="bi bi-list" id="menu-icon"></i>
+    </button>
+  </div>
+
+  <!-- ======= Mobile Nav Drawer ======= -->
+  <nav id="mobile-nav-drawer">
+    <ul>
+      <li><a href="#Home" class="mobile-nav-link"><i class="bx bx-home"></i> Home</a></li>
+      <li><a href="#about" class="mobile-nav-link"><i class="bx bx-user"></i> Sobre mí</a></li>
+      <li><a href="#services" class="mobile-nav-link"><i class="bi bi-people-fill"></i> Servicios</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="bx bx-envelope"></i> Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======= Mobile nav toggle button (original, hidden) ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" style="display:none!important"></i>
 
   <!-- ======= Header ======= -->
   <header id="header">
@@ -420,4 +508,33 @@
   <!-- Vendor JS Files -->
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/gligh
+  <script src="assets/vendor/glightbox/js/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Mobile nav toggle -->
+  <script>
+    (function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var drawer = document.getElementById('mobile-nav-drawer');
+      var icon = document.getElementById('menu-icon');
+      if (btn && drawer) {
+        btn.addEventListener('click', function() {
+          var isOpen = drawer.classList.toggle('open');
+          icon.className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+          link.addEventListener('click', function() {
+            drawer.classList.remove('open');
+            icon.className = 'bi bi-list';
+          });
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
