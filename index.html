@@ -115,12 +115,57 @@
     /* ── Responsive: sidebar header on mobile ── */
     @media (max-width: 991px) {
       #header {
-        position: relative;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 8px 16px !important;
+        z-index: 9997;
+        flex-direction: row !important;
+        align-items: center;
+        background: #040b14;
+      }
+      #header .d-flex {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
-        height: auto;
+      }
+      #header .profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 !important;
+      }
+      #header .profile img {
+        width: 36px !important;
+        height: 36px !important;
+      }
+      #header .profile h1 {
+        font-size: 1rem !important;
+        margin: 0 !important;
+      }
+      #header .profile .social-links {
+        display: none;
+      }
+      #header .nav-menu {
+        display: none;
       }
       #main {
         margin-left: 0 !important;
+        margin-top: 56px;
+      }
+      .hero-section {
+        margin-top: 0;
+      }
+      .mobile-nav-toggle {
+        display: block !important;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
       }
     }
 
@@ -159,7 +204,7 @@
 
         <div class="social-links mt-3 text-center">
           <a href="https://www.linkedin.com/in/CarlaDiPinto" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="/cdn-cgi/l/email-protection#21454851484f554e0f4240534d40181161464c40484d0f424e4c" class="email" target="_blank"><i class="bi bi-envelope"></i></a>
+          <a href="mailto:dipinto.carla90&#64;gmail.com" class="email" target="_blank"><i class="bi bi-envelope"></i></a>
         </div>
       </div>
 
@@ -180,8 +225,8 @@
     <h4>Atención psicológica virtual</h4>
 
     <div class="hero-contact-links">
-      <a href="/cdn-cgi/l/email-protection#43272a332a2d372c6d2022312f227a7303242e222a2f6d202c2e" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank">
-        <i class="bi bi-envelope-fill"></i> <span class="__cf_email__" data-cfemail="7f1b160f16110b10511c1e0d131e464f3f18121e1613511c1012">[email&#160;protected]</span>
+      <a href="mailto:dipinto.carla90&#64;gmail.com" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank">
+        <i class="bi bi-envelope-fill"></i> dipinto.carla90&#64;gmail.com
       </a>
       <a href="https://wa.me/+17038430522" target="_blank">
         <i class="bi bi-whatsapp"></i> WhatsApp
@@ -313,8 +358,8 @@
             </p>
 
             <p>
-              <a href="/cdn-cgi/l/email-protection#a6c2cfd6cfc8d2c988c5c7d4cac79f96e6c1cbc7cfca88c5c9cb" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank" style="color: #2c6e6e; font-weight: 600; text-decoration: none;">
-                <i class="bi bi-envelope-fill" style="margin-right:6px;"></i><span class="__cf_email__" data-cfemail="55313c253c3b213a7b36342739346c65153238343c397b363a38">[email&#160;protected]</span>
+              <a href="mailto:dipinto.carla90&#64;gmail.com" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank" style="color: #2c6e6e; font-weight: 600; text-decoration: none;">
+                <i class="bi bi-envelope-fill" style="margin-right:6px;"></i>dipinto.carla90&#64;gmail.com
               </a>
             </p>
 
