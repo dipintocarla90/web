@@ -143,7 +143,7 @@
 
     @media (min-width: 992px) {
       #mobile-topbar { display: none !important; }
-      #mobile-nav-drawer { display: none !important; }
+      /* Drawer stays hidden on desktop via visibility:hidden already set */
     }
 
     /* ── Mobile topbar styles ── */
@@ -191,8 +191,8 @@
     }
 
     /* ── Mobile nav drawer ── */
+    /* Hidden by default via transform only — NOT display:none — so transition works */
     #mobile-nav-drawer {
-      display: none;
       position: fixed;
       top: 54px; left: 0; right: 0;
       background: #040b14;
@@ -200,11 +200,13 @@
       padding: 10px 0 16px;
       border-top: 1px solid rgba(255,255,255,0.08);
       transform: translateY(-110%);
-      transition: transform 0.25s ease;
+      visibility: hidden;
+      transition: transform 0.25s ease, visibility 0.25s ease;
     }
 
     #mobile-nav-drawer.open {
       transform: translateY(0);
+      visibility: visible;
     }
 
     #mobile-nav-drawer ul {
@@ -236,9 +238,29 @@
       text-align: center;
     }
 
+    /* ── Hero: center across full viewport on desktop (ignore sidebar) ── */
+    @media (min-width: 992px) {
+      .hero-section {
+        margin-left: -300px;
+        padding-left: 300px;
+        width: calc(100% + 300px);
+      }
+    }
+
+    /* ── Reduce section spacing by half ── */
+    .about, .services, .contact {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    .section-title {
+      padding-bottom: 10px !important;
+      margin-bottom: 10px !important;
+    }
+
     /* ── Service boxes ── */
     .icon-box {
-      padding: 20px 16px;
+      padding: 10px 16px;
     }
 
     .icon-box .title a {
