@@ -192,19 +192,12 @@
 
     /* ── Mobile nav drawer ── */
     #mobile-nav-drawer {
-      display: none;
       position: fixed;
       top: 54px; left: 0; right: 0;
       background: #040b14;
       z-index: 9997;
       padding: 10px 0 16px;
       border-top: 1px solid rgba(255,255,255,0.08);
-      transform: translateY(-110%);
-      transition: transform 0.25s ease;
-    }
-
-    #mobile-nav-drawer.open {
-      transform: translateY(0);
     }
 
     #mobile-nav-drawer ul {
@@ -252,9 +245,38 @@
       color: #555;
     }
 
+    /* ── Reduce contact section top spacing ── */
+    section#contact {
+      padding-top: 20px !important;
+    }
+
+    /* ── Desktop: center hero accounting for sidebar ── */
+    @media (min-width: 992px) {
+      .hero-section {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+        text-align: center;
+      }
+    }
+
+    /* ── Mobile drawer: always in DOM, hidden via opacity+transform ── */
+    #mobile-nav-drawer {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    #mobile-nav-drawer.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (min-width: 992px) {
+      #mobile-topbar { display: none !important; }
+      #mobile-nav-drawer { display: none !important; }
+    }
 
   </style>
-</head>
 
 <body>
 
@@ -313,7 +335,7 @@
     <h4>Atención psicológica virtual</h4>
 
     <div class="hero-contact-links">
-      <a href="mailto:dipinto.carla90&#64;gmail.com" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank">
+      <a href="/cdn-cgi/l/email-protection#07636e776e697368296466756b663e37212431333c606a666e6b2964686a" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank">
         <i class="bi bi-envelope-fill"></i> dipinto.carla90&#64;gmail.com
       </a>
       <a href="https://wa.me/+17038430522" target="_blank">
@@ -446,7 +468,7 @@
             </p>
 
             <p>
-              <a href="mailto:dipinto.carla90&#64;gmail.com" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank" style="color: #2c6e6e; font-weight: 600; text-decoration: none;">
+              <a href="/cdn-cgi/l/email-protection#bdd9d4cdd4d3c9d293dedccfd1dc848d9b9e8b8986dad0dcd4d193ded2d0" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank" style="color: #2c6e6e; font-weight: 600; text-decoration: none;">
                 <i class="bi bi-envelope-fill" style="margin-right:6px;"></i>dipinto.carla90&#64;gmail.com
               </a>
             </p>
@@ -506,7 +528,7 @@
   </style>
 
   <!-- Vendor JS Files -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -515,14 +537,15 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Mobile nav toggle -->
+   <!-- Mobile nav toggle -->
   <script>
-    (function() {
+    document.addEventListener('DOMContentLoaded', function() {
       var btn = document.getElementById('mobile-menu-btn');
       var drawer = document.getElementById('mobile-nav-drawer');
       var icon = document.getElementById('menu-icon');
       if (btn && drawer) {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
           var isOpen = drawer.classList.toggle('open');
           icon.className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
         });
@@ -532,9 +555,14 @@
             icon.className = 'bi bi-list';
           });
         });
+        document.addEventListener('click', function(e) {
+          if (!drawer.contains(e.target) && !btn.contains(e.target)) {
+            drawer.classList.remove('open');
+            icon.className = 'bi bi-list';
+          }
+        });
       }
-    })();
-  </script>
+    });
 
 </body>
 </html>
