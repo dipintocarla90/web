@@ -1,93 +1,148 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="es" class="h-100">
 
-<head>
-  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17210514105"></script> 
-  <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17210514105'); </script>
-</head>
-  
-  <head>
-    <!-- Event snippet for Vista de una página conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-17210514105/xF-NCKnE1dsaELm1zo5A', 'value': 1.0, 'currency': 'USD', 'event_callback': callback }); return false; } </script>
-  </head>
-  
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17210514105"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17210514105"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17210514105');
+  </script>
 
-  gtag('config', 'AW-17210514105');
-</script>
-
-  <!-- Event snippet for Vista de una página conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+  <!-- Conversion snippet -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17210514105/xF-NCKnE1dsaELm1zo5A',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17210514105/xF-NCKnE1dsaELm1zo5A',
-      'value': 1.0,
-      'currency': 'USD',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+  </script>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.87.0">
-  <title> Carla Di Pinto | Psicología </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Psicóloga clínica online. Atención para adultos en CABA. Ansiedad, angustia, duelo, estrés y más.">
+  <title>Carla Di Pinto | Psicóloga Online – CABA</title>
 
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="canonical" href="https://www.virtualpsico.com">
 
-  <style>
-    .container {
-      position: relative;
-      max-width: 50em;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    .topleft {
-      position: absolute;
-      top: 4px;
-      left: 8px;
-      font-size: 18px;
-    }
-  </style>
-
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="icon" href="iPortfolio/assets/img/favicon2.ico">
   <link rel="shortcut icon" href="iPortfolio/assets/img/favicon2.ico">
   <link rel="apple-touch-icon" href="iPortfolio/assets/img/apple-touch-icon2.png">
 
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    /* ── Responsive base ── */
+    *, *::before, *::after { box-sizing: border-box; }
 
+    body { overflow-x: hidden; }
+
+    /* ── Hero ── */
+    .hero-section {
+      background-color: rgb(236, 236, 236);
+      width: 100%;
+      padding: 40px 20px 30px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .hero-section h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-weight: 300;
+      color: #444;
+      margin-bottom: 18px;
+    }
+
+    .hero-contact-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .hero-contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #2c6e6e;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .hero-contact-links a:hover { color: #1a4a4a; }
+
+    .hero-contact-links i { font-size: 1.1rem; }
+
+    .hero-divider {
+      border: none;
+      border-top: 3px solid #c8c8c8;
+      margin: 22px 0 0;
+    }
+
+    /* ── Section text ── */
+    .about .content h3,
+    .services .section-title h2 {
+      font-family: 'Lora', serif;
+    }
+
+    /* ── Responsive: sidebar header on mobile ── */
+    @media (max-width: 991px) {
+      #header {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      #main {
+        margin-left: 0 !important;
+      }
+    }
+
+    /* ── Service boxes ── */
+    .icon-box {
+      padding: 20px 16px;
+    }
+
+    .icon-box .title a {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+    }
+
+    .icon-box .description {
+      font-size: 0.93rem;
+      line-height: 1.65;
+      color: #555;
+    }
+
+
+  </style>
 </head>
-
-
-
 
 <body>
 
@@ -99,201 +154,178 @@ function gtag_report_conversion(url) {
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/Foto_car.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="virtualpsico.com">Carla Di Pinto  </a></h1>
+        <img src="assets/img/Foto_car.jpg" alt="Foto de Carla Di Pinto" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="https://www.virtualpsico.com">Carla Di Pinto</a></h1>
 
         <div class="social-links mt-3 text-center">
-        <a href="https://www.linkedin.com/in/CarlaDiPinto" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="mailto:dipinto.carla90@gmail.com" class="email" target="_blank"><i class="bx bi-envelope"></i></a>
-
+          <a href="https://www.linkedin.com/in/CarlaDiPinto" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="/cdn-cgi/l/email-protection#21454851484f554e0f4240534d40181161464c40484d0f424e4c" class="email" target="_blank"><i class="bi bi-envelope"></i></a>
         </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#Home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mí </span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mí</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bi bi-people-fill"></i> <span>Servicios</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-<!-- Hero -->
-<div class="p-10 my-0 text-center bg-image overlay" style="
-    background-color: rgb(236, 236, 236); /* ADDED THIS LINE rgb(238, 232, 224)  rgb(236, 236, 236) */
-    background-repeat: no-repeat;
-    background-size: fit; 
-    background-position: center;
-    width: 115%; /* <-- ADD THIS LINE */
-    height: 250.0px;
-  ">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-black">
-        <h1 class="mb-3">    Carla Di Pinto | Lic. en Psicología </h1>
-        <h4 class="mb-3">Atención psicológica virtual</h4>
+  <div class="hero-section" id="Home">
+    <h1>Carla Di Pinto | Lic. en Psicología</h1>
+    <h4>Atención psicológica virtual</h4>
+
+    <div class="hero-contact-links">
+      <a href="/cdn-cgi/l/email-protection#43272a332a2d372c6d2022312f227a7303242e222a2f6d202c2e" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank">
+        <i class="bi bi-envelope-fill"></i> <span class="__cf_email__" data-cfemail="7f1b160f16110b10511c1e0d131e464f3f18121e1613511c1012">[email&#160;protected]</span>
+      </a>
+      <a href="https://wa.me/+17038430522" target="_blank">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
     </div>
+
+    <hr class="hero-divider">
   </div>
-      <h4 class="mb-3" style="border-bottom: 5px solid black; padding-bottom: 1px;"> </h4>
-</div>
-
-
-<!-- Hero -->
+  <!-- End Hero -->
 
   <main id="main">
 
-    <!-- ======= About Me Section ======= -->
+    <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-    
-        <div class="section-title">
-     
-        </div>
-    
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="50">
-            <img src="assets/img/Foto_car3.jpeg" class="img-fluid" alt="">
+        <div class="row align-items-center">
+
+          <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
+            <img src="assets/img/Foto_car3.jpeg" class="img-fluid" alt="Carla Di Pinto, psicóloga">
           </div>
-          <div class="col-lg-8 pt-6 pt-lg-0 content" data-aos="fade-left" data-aos-delay="400">
-            <h3> Sobre mí </h3>
-            <p> Soy argentina, nacida en una pequeña ciudad de la provincia de Buenos Aires. Actualmente atiendo residentes de CABA de manera online. 
-            </p>
-            <p> </p>
+
+          <div class="col-lg-8 col-md-7 content">
+            <h3>Sobre mí</h3>
             <p>
-            Estudié la Licenciatura en Psicología en la Facultad de Psicología de la Universidad de Buenos Aires y cuento con un Posgrado en Psicoanálisis con práctica clínica en adultos
-              de la Institución Fernando Ulloa. Me encuentro en constante formación para nutrir mi práctica y ampliar
-              mis conocimientos para poder brindar una mejor atención. </p>
-            <p> </p>
-    
-            <p>
-              Actualmente me centro en el tratamiento para adultos. He trabajado en diversos contextos, y con diferentes poblaciones tanto con niños como adolescentes,
-              adultos y adultos mayores. Tengo años de experiencia en la práctica clínica privada, así como también
-              en internación domiciliaria. </p>
-         
+              Soy argentina, Licenciada en Psicología por la <strong>Universidad de Buenos Aires (UBA)</strong>,
+              con Posgrado en Psicoanálisis con práctica clínica en adultos en la Institución Fernando Ulloa.
+              Me encuentro en constante formación para poder brindar una atención cada vez más completa.
             </p>
-            <p> Como psicóloga clínica, te ofrezco un espacio para reflexionar y explorar lo que está ocurriendo en tu interior, más
-            allá de los síntomas visibles, a partir de una escucha atenta y compasiva. Este es un camino que hacemos juntos, a través de la reflexión y el análisis, en un espacio de confianza, donde te
-            invito a expresar lo que sentís libremente, para poder desentrañar las causas subyacentes de tu malestar.
-        </p>
+            <p>
+              Atiendo adultos de CABA de manera <strong>100% online</strong>. A lo largo de mi carrera
+              trabajé en distintos contextos — práctica clínica privada, internación domiciliaria — y con
+              diversas poblaciones: adolescentes, adultos y adultos mayores.
+            </p>
+            <p>
+              Te ofrezco un espacio de escucha atenta y sin juicios, donde podés expresar lo que sentís
+              libremente. Trabajamos juntos para ir más allá de los síntomas y entender qué hay detrás
+              de tu malestar.
+            </p>
           </div>
+
         </div>
-    
       </div>
     </section><!-- End About Section -->
-  
-  
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
-          <h2> Hablemos sobre: </h2>
-
-          
+          <h2>¿Qué te trajo hasta acá?</h2>
         </div>
-    
-        
+
         <div class="row">
 
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="50">
-            <h4 class="title"><a href="">Ansiedad</a></h4>
-            <p class="description"> La ansiedad puede sentirse abrumadora, pero detrás de ella hay una historia que merece ser
-            escuchada. Te ofrezco un espacio para explorar lo que está ocurriendo en tu
-            interior, más allá de los síntomas visibles, a partir de una escucha atenta y compasiva. </p>
+          <div class="col-lg-6 col-md-6 icon-box">
+            <h4 class="title"><a href="#contact">Ansiedad</a></h4>
+            <p class="description">
+              ¿Sentís que la cabeza no para, que el cuerpo se tensiona, que anticipás lo peor?
+              La ansiedad tiene una historia personal detrás. Juntos podemos encontrarla y trabajarla.
+            </p>
           </div>
 
-          <div class="col-lg-6 col-md-4 icon-box" data-aos="fade-up" data-aos-delay="650">
-            <h4 class="title"><a href="">Angustia</a></h4>
-            <p class="description"> Pensemos la angustia como una señal de que hay algo en nuestro interior que necesita
-            ser comprendido. Muchas veces nos enfrentamos a una sensación de pesadez, vacío o desconcierto. Permitime acompañarte en ese proceso de comprensión y alivio de tus síntomas,
-            reconociendo que cada persona atraviesa estas vivencias de manera singular.</p>
-            </div>
+          <div class="col-lg-6 col-md-6 icon-box">
+            <h4 class="title"><a href="#contact">Angustia</a></h4>
+            <p class="description">
+              Esa sensación de pesadez, vacío o desconcierto que no sabés bien de dónde viene —
+              es una señal de que algo interno necesita atención. Te acompaño a comprenderla y a aliviarte.
+            </p>
           </div>
-                <div class="row">
 
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="1250">
-            <h4 class="title"><a href="">Migración</a></h4>
-            <p class="description"> Como inmigrante, entiendo de primera mano los desafíos emocionales que implica dejar
-            atrás lo conocido para empezar de nuevo. La adaptación a un nuevo entorno, las diferencias culturales, la sensación de pérdida pueden generar angustia.
-            Trabajemos en fortalecer tus recursos internos, para
-            encontrar equilibrio y bienestar mientras te adaptas a tu nueva vida.</p>
-          </div>
-  
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="1850">
-            <h4 class="title"><a href=""> Duelo </a></h4>
-            <p class="description"> El duelo es un proceso complejo. Moviliza emociones profundas y muchas veces difíciles de procesar. Te ofrezco un espacio para entender cómo esta
-            experiencia se inscribe en tu historia personal para que, gradualmente, puedas elaborar lo vivido
-            y encontrar nuevos sentidos en medio del padecimiento.</p>
-          </div>
         </div>
 
- 
-      <div class="row">
-      
-        <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="2450">
-          <h4 class="title"><a href="">Crianza</a></h4>
-          <p class="description"> Asumir el rol de cuidado y acompañamiento de un hijo/a implica una serie de transformaciones emocionales profundas. Dialoguemos sobre cómo estas experiencias reconfiguran tu
-          identidad y cómo tu historia personal influye en tu manera de relacionarte con tu hijo/a.</p>
-        </div>
-      
-        <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="3000">
-          <div class="target-element" id="stress">
-          <h4 class="title"><a href="#stress"> <p> Estrés / Burn out </p> </a></h4>
-            <p class="description"> El estrés y la falta de equilibrio entre tu vida personal y profesional están afectando tu
-              bienestar, llevándote al agotamiento físico y mental. Si te resulta familiar, no estás solo. Nos centraremos en las raíces de este malestar para
-          así explorar nuevas formas de relacionarte con tus emociones y con los desafíos que enfrentas.</p>
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 icon-box">
+            <h4 class="title"><a href="#contact">Migración</a></h4>
+            <p class="description">
+              Dejar atrás lo conocido tiene un costo emocional real: extrañar, adaptarse, perder referencias.
+              Lo entiendo de primera mano. Trabajo con vos para encontrar equilibrio en tu nueva vida.
+            </p>
           </div>
-           </div>
+
+          <div class="col-lg-6 col-md-6 icon-box">
+            <h4 class="title"><a href="#contact">Duelo</a></h4>
+            <p class="description">
+              No solo la muerte duele — también duelen los vínculos rotos, los proyectos que no fueron,
+              los cambios que no elegiste. Te ofrezco un espacio para elaborar lo vivido y encontrar nuevos sentidos.
+            </p>
+          </div>
+
         </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 icon-box">
+            <h4 class="title"><a href="#contact">Crianza</a></h4>
+            <p class="description">
+              Ser madre o padre transforma todo. Las dudas, el agotamiento, la culpa, el amor intenso.
+              Hablemos de cómo tu historia personal influye en cómo criás y cómo podés hacerlo más conscientemente.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 icon-box" id="stress">
+            <h4 class="title"><a href="#contact">Estrés / Burnout</a></h4>
+            <p class="description">
+              Cuando el trabajo o la vida cotidiana te agotan al punto de no poder más —
+              no es debilidad, es una señal. Exploremos qué está pasando y cómo recuperar el equilibrio.
+            </p>
+          </div>
+
+        </div>
+
       </div>
-      
-      </div>
-    
-  
-      
     </section><!-- End Services Section -->
 
-
-
-  
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Contacto</h2>
-         </div>
-  
-        <div class="row" data-aos="fade-in">
-          
+        </div>
 
-              <div class="email">
-                 <p>
-                  <a onclick="return gtag_report_conversion('"mailto: dipinto.carla90@gmail.com")" />
-                    <i class="bi bi-envelope"></i></a> 
-                    <a href="mailto:dipinto.carla90@gmail.com" target="_blank">
-                     dipinto.carla90@gmail.com
-                  </a>
-                </p>
-              </div>
+        <div class="row">
+          <div class="col-12">
 
-            <div class="WhatsApp"> 
-              <p style="font-family: Arial, sans-serif; font-size: 14px; color: #568bff; margin-top: 5px;">
-                  <a href="https://wa.me/+17038430522" target="_blank" ; vertical-align: middle;"> <i class="bi bi-whatsapp"; color: #333333></i> </a>
-                  <a href="https://wa.me/+17038430522" target="_blank" ; vertical-align: middle;">WhatsApp</a>
-                <span style="vertical-align: middle;"> </span>
-              </p>
+            <p style="font-size: 1rem; color: #444; margin-bottom: 12px;">
+              Si querés dar el primer paso, escribime. Ofrezco una primera entrevista de admisión sin cargo.
+            </p>
 
-            </div>
-           </div>
+            <p>
+              <a href="/cdn-cgi/l/email-protection#a6c2cfd6cfc8d2c988c5c7d4cac79f96e6c1cbc7cfca88c5c9cb" onclick="return gtag_report_conversion('mailto:dipinto.carla90@gmail.com')" target="_blank" style="color: #2c6e6e; font-weight: 600; text-decoration: none;">
+                <i class="bi bi-envelope-fill" style="margin-right:6px;"></i><span class="__cf_email__" data-cfemail="55313c253c3b213a7b36342739346c65153238343c397b363a38">[email&#160;protected]</span>
+              </a>
+            </p>
+
+            <p>
+              <a href="https://wa.me/+17038430522" target="_blank"
+                 style="color: #25D366; font-weight: 600; text-decoration: none;">
+                <i class="bi bi-whatsapp" style="margin-right:6px;"></i>WhatsApp
+              </a>
+            </p>
 
           </div>
-
-          
-
         </div>
 
       </div>
@@ -301,27 +333,46 @@ function gtag_report_conversion(url) {
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/+17038430522?text=Hola%20Carla%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20una%20primera%20entrevista."
+     target="_blank"
+     id="whatsapp-float"
+     title="Escribime por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <style>
+    #whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 9999;
+      background-color: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    #whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.08);
+      color: #fff;
+    }
+    .back-to-top { bottom: 96px !important; }
+  </style>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
-
-
+  <script src="assets/vendor/glightbox/js/gligh
